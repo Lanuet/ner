@@ -124,9 +124,7 @@ def read_word_embedding(replace=False):
             "UNKNOWN": 1,
             **{w: i+2 for i, w in enumerate(words)}
         }
-        word_embed_size = unknown.shape[0]
         vectors = [
-            np.zeros(word_embed_size),
             unknown,
             *list(vectors),
         ]
